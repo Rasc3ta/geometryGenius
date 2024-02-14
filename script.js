@@ -1,3 +1,5 @@
+// making functions for event listeners:
+
 const getValues = (Event) => {
     const inputs = Event.target.parentElement.getElementsByTagName('input');
 
@@ -7,13 +9,30 @@ const getValues = (Event) => {
     return [value1, value2]
 } 
 
+const displayResult = (area, shape) => {
+    const display = document.getElementById('cardBody');
+
+    const h3 = document.createElement('h3');
+    h3.innerHTML = `Area of ${shape} : ${area} cm<sup>2</sup>` ;
+    h3.style.fontSize = '1.25rem';
+    h3.style.fontWeight = '800';
+
+    display.appendChild(h3)
+}
+const display = document.getElementById('cardBody');
 
 const triangleArea = (Event) => {
     const valueArray = getValues(Event);
     
     const area = .5 * valueArray[0] * valueArray[1];
-    console.log(area);
+     
+    displayResult(area, "triangle")
 }
-const triangle = document.getElementById('triangle');
+
+
+
+
+
+// adding event listeners :
 
 triangle.querySelector('button').addEventListener('click', triangleArea);
