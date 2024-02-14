@@ -19,7 +19,6 @@ const displayResult = (area, shape) => {
 
     display.appendChild(h3)
 }
-const display = document.getElementById('cardBody');
 
 const triangleArea = (Event) => {
     const valueArray = getValues(Event);
