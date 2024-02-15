@@ -37,6 +37,14 @@ const rectangleArea = (Event) => {
     displayResult(area, "rectangle")
 }
 
+const parallelogramArea = (Event) => {
+    const valueArray = getValues(Event);
+    
+    const area =  valueArray[0] * valueArray[1];
+
+    displayResult(area, "parallelogram")
+}
+
 
 
 // adding event listeners :
@@ -45,4 +53,7 @@ document.getElementById('triangle').querySelector('button').addEventListener('cl
 
 
 document.getElementById('rectangle').querySelector('button').addEventListener('click', rectangleArea);
+
+
+document.getElementById('parallelogram').querySelector('button').addEventListener('click', parallelogramArea);
 
