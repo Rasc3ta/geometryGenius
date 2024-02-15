@@ -29,9 +29,20 @@ const triangleArea = (Event) => {
 }
 
 
+const rectangleArea = (Event) => {
+    const valueArray = getValues(Event);
+    
+    const area =  valueArray[0] * valueArray[1];
+
+    displayResult(area, "rectangle")
+}
 
 
 
 // adding event listeners :
 
-triangle.querySelector('button').addEventListener('click', triangleArea);
+document.getElementById('triangle').querySelector('button').addEventListener('click', triangleArea);
+
+
+document.getElementById('rectangle').querySelector('button').addEventListener('click', rectangleArea);
+
