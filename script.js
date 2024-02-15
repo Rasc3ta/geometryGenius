@@ -46,6 +46,31 @@ const parallelogramArea = (Event) => {
 }
 
 
+const rhombusArea = (Event) => {
+    const valueArray = getValues(Event);
+    
+    const area = .5 * valueArray[0] * valueArray[1];
+     
+    displayResult(area, "rhombus")
+};
+
+
+const pentagonArea = (Event) => {
+    const valueArray = getValues(Event);
+    
+    const area = .5 * valueArray[0] * valueArray[1];
+     
+    displayResult(area, "pentagon")
+}
+
+
+const ellipseArea = (Event) => {
+    const valueArray = getValues(Event);
+    
+    const area = Math.PI * valueArray[0] * valueArray[1];
+     
+    displayResult(area, "ellipse")
+}
 
 // adding event listeners :
 
@@ -56,4 +81,12 @@ document.getElementById('rectangle').querySelector('button').addEventListener('c
 
 
 document.getElementById('parallelogram').querySelector('button').addEventListener('click', parallelogramArea);
+
+document.getElementById('rhombus').querySelector('button').addEventListener('click', rhombusArea);
+
+document.getElementById('pentagon').querySelector('button').addEventListener('click', pentagonArea);
+
+document.getElementById('ellipse').querySelector('button').addEventListener('click', ellipseArea);
+
+
 
